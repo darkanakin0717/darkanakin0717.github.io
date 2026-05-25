@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Laser Vision — Custom Wood Laser Engravings</title>
+<meta name="description" content="Laser Vision crafts heirloom-quality custom wood engravings. Browse our gallery and commission your own one-of-a-kind piece." />
+<meta property="og:title" content="Laser Vision — Custom Wood Laser Engravings" />
+<meta property="og:description" content="Heirloom-quality custom wood laser engravings." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#15110d; --fg:#f3ead9; --muted:#a89880; --card:#1c1611; --border:#3a2e23;
+    --ember:#e8743a; --wood:#d6a35c; --input:#1a1410; --primary:#e8743a; --primary-fg:#15110d;
+    --shadow-ember:0 20px 60px -20px rgba(232,116,58,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;font-weight:300;line-height:1.5;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .display{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+  .ember{color:var(--ember)}
+  .muted{color:var(--muted)}
+  .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+  .eyebrow{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ember);margin-bottom:.75rem}
+  .gradient-text{background:linear-gradient(135deg,var(--ember),var(--wood));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;padding:.85rem 1.5rem;border-radius:2px;font-weight:500;font-size:.95rem;transition:.2s;cursor:pointer;border:none}
+  .btn-primary{background:var(--primary);color:var(--primary-fg);box-shadow:var(--shadow-ember)}
+  .btn-primary:hover{opacity:.9}
+  .btn-ghost{border:1px solid var(--border);color:var(--fg);background:transparent}
+  .btn-ghost:hover{border-color:var(--ember)}
+
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(21,17,13,.7);border-bottom:1px solid var(--border)}
+  nav{max-width:1200px;margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:.5rem}
+  .logo-mark{width:32px;height:32px;border-radius:2px;background:linear-gradient(135deg,var(--ember),var(--wood));display:grid;place-items:center;color:var(--primary-fg);font-weight:700}
+  .logo-text{font-family:'Cormorant Garamond',serif;font-size:1.25rem;letter-spacing:.05em}
+  .nav-links{display:none;gap:2rem;font-size:.875rem;color:var(--muted)}
+  .nav-links a:hover{color:var(--fg)}
+  @media(min-width:768px){.nav-links{display:flex}}
+  .nav-cta{padding:.5rem 1rem;border-radius:2px;background:var(--primary);color:var(--primary-fg);font-size:.875rem;font-weight:500}
+
+  .hero{padding:6rem 0 8rem;position:relative}
+  .hero-grid{display:grid;gap:3rem;align-items:center}
+  @media(min-width:1024px){.hero-grid{grid-template-columns:7fr 5fr}}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05}
+  h1 em{font-style:italic}
+  .hero p.lead{margin-top:1.5rem;font-size:1.125rem;color:var(--muted);max-width:560px;line-height:1.7}
+  .hero-ctas{margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+  .stats{margin-top:3rem;display:flex;gap:2.5rem;flex-wrap:wrap}
+  .stat-num{font-family:'Cormorant Garamond',serif;font-size:1.875rem}
+  .stat-label{font-size:.875rem;color:var(--muted)}
+  .hero-img{position:relative}
+  .hero-img .frame{aspect-ratio:4/5;border-radius:2px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-ember)}
+  .hero-img .frame img{width:100%;height:100%;object-fit:cover}
+  .hero-card{position:absolute;bottom:-1.5rem;left:-1.5rem;background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:2px;max-width:220px;box-shadow:var(--shadow-ember);display:none}
+  @media(min-width:768px){.hero-card{display:block}}
+
+  section.band{border-top:1px solid var(--border);padding:6rem 0}
+  .band.alt{background:rgba(28,22,17,.4)}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+  h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,4vw,3rem)}
+
+  .gallery-grid{display:grid;gap:1.5rem;grid-template-columns:1fr}
+  @media(min-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+  figure{background:var(--card);border:1px solid var(--border);border-radius:2px;overflow:hidden;transition:.3s}
+  figure:hover{border-color:var(--ember)}
+  figure .img-wrap{aspect-ratio:4/5;overflow:hidden}
+  figure img{width:100%;height:100%;object-fit:cover;transition:.7s}
+  figure:hover img{transform:scale(1.05)}
+  figcaption{padding:1.25rem;display:flex;justify-content:space-between;gap:.75rem}
+  .tag{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ember)}
+  .piece-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;margin-top:.25rem}
+  .size{font-size:.75rem;color:var(--muted);white-space:nowrap}
+
+  .process-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+  @media(min-width:768px){.process-grid{grid-template-columns:repeat(4,1fr)}}
+  .step{border-top:1px solid var(--ember);padding-top:1.5rem}
+  .step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;background:linear-gradient(135deg,var(--ember),var(--wood));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .step h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;margin-top:.75rem}
+  .step p{color:var(--muted);font-size:.875rem;margin-top:.75rem;line-height:1.6}
+
+  .about{max-width:780px;margin:0 auto;text-align:center}
+  .about p{font-size:1.125rem;color:var(--muted);line-height:1.7;margin-top:1rem}
+
+  form{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:2px;padding:2rem;box-shadow:var(--shadow-ember)}
+  .form-row{display:grid;gap:1.25rem;grid-template-columns:1fr;margin-bottom:1.25rem}
+  @media(min-width:640px){.form-row{grid-template-columns:1fr 1fr}}
+  label{display:block;margin-bottom:1.25rem}
+  label > span{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .input{width:100%;margin-top:.5rem;background:var(--input);border:1px solid var(--border);border-radius:2px;padding:.7rem .85rem;color:var(--fg);font-size:.95rem;outline:none;transition:.15s;font-family:inherit}
+  .input:focus{border-color:var(--ember)}
+  textarea.input{resize:vertical;min-height:120px}
+  form .btn-primary{width:100%;justify-content:center;padding:.9rem;font-size:1rem}
+
+  .contact-head{text-align:center;margin-bottom:3rem}
+  .contact-head p{margin-top:1rem;color:var(--muted)}
+
+  footer{border-top:1px solid var(--border);padding:2.5rem 0;color:var(--muted);font-size:.875rem}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  .foot-logo{display:flex;align-items:center;gap:.5rem}
+  .foot-logo .swatch{width:24px;height:24px;border-radius:2px;background:linear-gradient(135deg,var(--ember),var(--wood))}
+  .foot-logo span{font-family:'Cormorant Garamond',serif;color:var(--fg);font-size:1rem}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="logo">
+      <span class="logo-mark">L</span>
+      <span class="logo-text">Laser Vision</span>
+    </a>
+    <div class="nav-links">
+      <a href="#gallery">Gallery</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Commission a Piece</a>
+  </nav>
+</header>
+
+<section id="top" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Precision Wood Laser Engraving</p>
+      <h1>Stories <em class="gradient-text">burned</em> into wood.</h1>
+      <p class="lead">Laser Vision designs and engraves heirloom pieces from premium hardwoods — portraits, schematics, logos, and custom commissions, each rendered with sub-millimeter precision.</p>
+      <div class="hero-ctas">
+        <a href="#gallery" class="btn btn-primary">View the Gallery</a>
+        <a href="#contact" class="btn btn-ghost">Start a Custom Order →</a>
+      </div>
+      <div class="stats">
+        <div><div class="stat-num gradient-text">500+</div><div class="stat-label">Pieces engraved</div></div>
+        <div><div class="stat-num gradient-text">±0.05mm</div><div class="stat-label">Laser precision</div></div>
+        <div><div class="stat-num gradient-text">7 day</div><div class="stat-label">Avg turnaround</div></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="frame"><img src="images/engraving-yankee.jpg" alt="Yankee Stadium schematic engraved on wood" /></div>
+      <div class="hero-card">
+        <div class="tag">Featured</div>
+        <div class="piece-title">The House That Ruth Built</div>
+        <div class="size" style="margin-top:.25rem">Birch ply · 12″ × 12″</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="band">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Selected Works</p>
+        <h2>The Gallery</h2>
+      </div>
+      <p class="muted" style="max-width:380px">A sampling of recent engravings. Every piece is laser-cut from premium birch, maple, or walnut and finished by hand.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure><div class="img-wrap"><img src="images/engraving-yankee.jpg" alt="The House That Ruth Built"></div><figcaption><div><div class="tag">Architectural Schematic</div><div class="piece-title">The House That Ruth Built</div></div><div class="size">12″ × 12″</div></figcaption></figure>
+      <figure><div class="img-wrap"><img src="images/engraving-batlogo.jpg" alt="Caped Crusader Insignia"></div><figcaption><div><div class="tag">Cut &amp; Engraved</div><div class="piece-title">Caped Crusader Insignia</div></div><div class="size">16″ × 8″</div></figcaption></figure>
+      <figure><div class="img-wrap"><img src="images/engraving-broly.jpg" alt="Legendary Saiyan"></div><figcaption><div><div class="tag">Portrait Engraving</div><div class="piece-title">Legendary Saiyan</div></div><div class="size">9″ × 12″</div></figcaption></figure>
+      <figure><div class="img-wrap"><img src="images/engraving-superman.jpg" alt="Man of Steel Collage"></div><figcaption><div><div class="tag">Shaped Plaque</div><div class="piece-title">Man of Steel Collage</div></div><div class="size">14″ × 11″</div></figcaption></figure>
+      <figure><div class="img-wrap"><img src="images/engraving-jesus.jpg" alt="Christ — Crown of Thorns"></div><figcaption><div><div class="tag">Devotional Series</div><div class="piece-title">Christ — Crown of Thorns</div></div><div class="size">10″ × 10″</div></figcaption></figure>
+      <figure><div class="img-wrap"><img src="images/engraving-batman.jpg" alt="Dark Knight Typeset"></div><figcaption><div><div class="tag">Poster Engraving</div><div class="piece-title">Dark Knight Typeset</div></div><div class="size">9″ × 12″</div></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="band alt">
+  <div class="container">
+    <p class="eyebrow">From Idea to Heirloom</p>
+    <h2 style="margin-bottom:3rem">A four-step process</h2>
+    <div class="process-grid">
+      <div class="step"><div class="step-num">01</div><h3>Concept</h3><p>Share your idea, reference, photo, or logo. We'll talk dimensions, wood species, and finish.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>Design Proof</h3><p>We prepare a digital proof for your approval — every line, every shadow.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Engrave</h3><p>Your piece is laser-engraved on premium hardwood with sub-millimeter precision.</p></div>
+      <div class="step"><div class="step-num">04</div><h3>Finish &amp; Ship</h3><p>Hand-sanded, oil-finished, and packed with care. Shipped worldwide.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="band">
+  <div class="container about">
+    <p class="eyebrow">About</p>
+    <h2>A studio devoted to grain and light.</h2>
+    <p>Laser Vision is a small workshop obsessed with the alchemy of beam and timber. We believe the best engravings aren't decorations — they're documents of devotion, fandom, faith, and family, made permanent in the most patient of mediums.</p>
+  </div>
+</section>
+
+<section id="contact" class="band alt">
+  <div class="container">
+    <div class="contact-head">
+      <p class="eyebrow">Commission</p>
+      <h2>Bring your idea to wood.</h2>
+      <p>Tell us what you'd like engraved. We respond within one business day.</p>
+    </div>
+    <form onsubmit="event.preventDefault();alert('Thanks — we\'ll be in touch shortly.');this.reset();">
+      <div class="form-row">
+        <label><span>Your name</span><input required class="input" placeholder="Jane Doe" /></label>
+        <label><span>Email</span><input required type="email" class="input" placeholder="jane@example.com" /></label>
+      </div>
+      <div class="form-row">
+        <label><span>Piece type</span>
+          <select class="input">
+            <option>Portrait engraving</option><option>Logo / Brand</option><option>Architectural / Schematic</option><option>Devotional</option><option>Other custom</option>
+          </select>
+        </label>
+        <label><span>Approx. size</span>
+          <select class="input">
+            <option>Small (≤ 8″)</option><option>Medium (8–14″)</option><option>Large (14–24″)</option><option>Oversize (24″+)</option>
+          </select>
+        </label>
+      </div>
+      <label><span>Tell us about your piece</span><textarea rows="5" class="input" placeholder="Reference, wood preference, deadline…"></textarea></label>
+      <button type="submit" class="btn btn-primary">Request a Quote</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot">
+    <div class="foot-logo"><div class="swatch"></div><span>Laser Vision</span></div>
+    <div>© <span id="yr"></span> Laser Vision Studio · Handcrafted in wood &amp; light.</div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
